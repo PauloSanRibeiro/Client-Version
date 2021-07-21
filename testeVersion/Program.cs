@@ -37,10 +37,11 @@ namespace testeVersion
                             {
                                 foreach (var name in lineName)
                                 {
-                                    Write(name + " ");
-                                    //Thread.Sleep(1500);
+                                    Write(name);
+                                   
                                 }
-                                WriteLine("-> " + version.InnerText);
+                                WriteLine(" -> " + version.InnerText);
+                                //Thread.Sleep(300);
                             }
 
                         }
