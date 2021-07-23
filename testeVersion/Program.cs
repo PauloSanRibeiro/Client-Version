@@ -11,8 +11,8 @@ namespace testeVersion
     {
         static void Main(string[] args)
         {
-            string clientVersion = @"C:\Users\Paulo S Ribeiro\Documents\Documentos\testeVersion\clientVersion.txt";
-            string clientName = @"C:\Users\Paulo S Ribeiro\Documents\Documentos\testeVersion\clientName.txt";
+            string clientVersion = @"C:\Users\Paulo S Ribeiro\Documents\Documentos\ClientVersion\testeVersion\Files\clientVersion.txt";
+            string clientName = @"C:\Users\Paulo S Ribeiro\Documents\Documentos\ClientVersion\testeVersion\Files\clientName.txt";
             /*
             StreamReader sr = null;
             sr = File.OpenText(sourcePath);
