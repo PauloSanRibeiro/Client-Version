@@ -11,7 +11,7 @@ namespace ClientVersion
     {
         static void Main(string[] args)
         {
-             Write("Caminho de Acesso ao Arquivo: ");
+            Write("Caminho de Acesso ao Arquivo: ");
             string filesPath = ReadLine();
 
             try
