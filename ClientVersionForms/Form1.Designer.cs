@@ -31,69 +31,68 @@ namespace ClientVersionForms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VersionClient));
             this.txtLblTitle = new System.Windows.Forms.Label();
-            this.txtLblNameClient = new System.Windows.Forms.Label();
-            this.txtLblClientVersion = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.BntSearchVersionClient = new System.Windows.Forms.Button();
+            this.ClientName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Url = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Version = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtLblTitle
             // 
-            this.txtLblTitle.AutoSize = true;
-            this.txtLblTitle.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.txtLblTitle.Location = new System.Drawing.Point(232, 9);
+            resources.ApplyResources(this.txtLblTitle, "txtLblTitle");
             this.txtLblTitle.Name = "txtLblTitle";
-            this.txtLblTitle.Size = new System.Drawing.Size(136, 24);
-            this.txtLblTitle.TabIndex = 0;
-            this.txtLblTitle.Text = "Version Query";
-            this.txtLblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtLblNameClient
-            // 
-            this.txtLblNameClient.AutoSize = true;
-            this.txtLblNameClient.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.txtLblNameClient.Location = new System.Drawing.Point(54, 58);
-            this.txtLblNameClient.Name = "txtLblNameClient";
-            this.txtLblNameClient.Size = new System.Drawing.Size(112, 22);
-            this.txtLblNameClient.TabIndex = 1;
-            this.txtLblNameClient.Text = "Client Name";
-            this.txtLblNameClient.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtLblClientVersion
-            // 
-            this.txtLblClientVersion.AutoSize = true;
-            this.txtLblClientVersion.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.txtLblClientVersion.Location = new System.Drawing.Point(419, 58);
-            this.txtLblClientVersion.Name = "txtLblClientVersion";
-            this.txtLblClientVersion.Size = new System.Drawing.Size(125, 22);
-            this.txtLblClientVersion.TabIndex = 2;
-            this.txtLblClientVersion.Text = "Client Version";
-            this.txtLblClientVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 97);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ClientName,
+            this.Url,
+            this.Version});
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(595, 247);
-            this.dataGridView1.TabIndex = 3;
+            // 
+            // BntSearchVersionClient
+            // 
+            this.BntSearchVersionClient.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.BntSearchVersionClient, "BntSearchVersionClient");
+            this.BntSearchVersionClient.Name = "BntSearchVersionClient";
+            this.BntSearchVersionClient.UseVisualStyleBackColor = false;
+            this.BntSearchVersionClient.Click += new System.EventHandler(this.BntSearchVersionClient_Click_1);
+            // 
+            // ClientName
+            // 
+            this.ClientName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            resources.ApplyResources(this.ClientName, "ClientName");
+            this.ClientName.Name = "ClientName";
+            // 
+            // Url
+            // 
+            this.Url.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            resources.ApplyResources(this.Url, "Url");
+            this.Url.Name = "Url";
+            // 
+            // Version
+            // 
+            this.Version.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            resources.ApplyResources(this.Version, "Version");
+            this.Version.Name = "Version";
             // 
             // VersionClient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 348);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(101)))), ((int)(((byte)(159)))));
+            this.Controls.Add(this.BntSearchVersionClient);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txtLblClientVersion);
-            this.Controls.Add(this.txtLblNameClient);
             this.Controls.Add(this.txtLblTitle);
-            this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "VersionClient";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Client Version";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -105,9 +104,11 @@ namespace ClientVersionForms
         #endregion
 
         private System.Windows.Forms.Label txtLblTitle;
-        private System.Windows.Forms.Label txtLblNameClient;
-        private System.Windows.Forms.Label txtLblClientVersion;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button BntSearchVersionClient;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClientName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Url;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Version;
     }
 }
 

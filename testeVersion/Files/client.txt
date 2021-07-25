@@ -1,4 +1,4 @@
-Alfenas,https://www.alfenas-mg.vivver.com/login
+﻿Alfenas,https://www.alfenas-mg.vivver.com/login
 APAEMantena,https://www.mantena-mg-apae.vivver.com/login
 Berizal,https://www.berizal-mg.vivver.com/login
 Bocaiuva,https://www.bocaiuva-mg.vivver.com/login
