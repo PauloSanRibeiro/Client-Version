@@ -79,7 +79,8 @@ namespace ClientVersionForms
             }
             */
 
-            string filesPath = @"C:\Users\Paulo S Ribeiro\Documents\Documentos\ClientVersion\testeVersion\Files\client.csv";
+
+            string filesPath = txtBoxDirectory.Text;  // @"C:\Users\Paulo S Ribeiro\Documents\Documentos\ClientVersion\testeVersion\Files\client.csv";
             string lines;
 
             string[] fields = File.ReadAllLines(filesPath);
@@ -104,7 +105,7 @@ namespace ClientVersionForms
                         dataGridView1.Rows.Add(client.NameClient, client.UrlClient, versao);
                     }
 
-                    
+
 
                     /*foreach (var ver in version)
                     {
@@ -145,20 +146,25 @@ namespace ClientVersionForms
 
         private void BntSearchVersionClient_Click_1(object sender, EventArgs e)
         {
-            //            dataGridView1.Visible = true;
+            dataGridView1.Visible = true;
             SearchVersionClient();
+        }
+
+        private void LblQuestion_Click(object sender, EventArgs e)
+        {
+
         }
         /*
 private void ExibirTexto()
 {
-   string caminhoArquivo = @"C:\Users\Paulo S Ribeiro\Documents\Documentos\ClientVersion\testeVersion\Files\client.txt";
-   string[] consulta = File.ReadAllLines(caminhoArquivo);
+string caminhoArquivo = @"C:\Users\Paulo S Ribeiro\Documents\Documentos\ClientVersion\testeVersion\Files\client.txt";
+string[] consulta = File.ReadAllLines(caminhoArquivo);
 
-   foreach (var item in consulta)
-   {
-       lsBoxText.Visible = true;
-       lsBoxText.Items.Add(item);
-   }
+foreach (var item in consulta)
+{
+lsBoxText.Visible = true;
+lsBoxText.Items.Add(item);
+}
 }*/
 
     }
