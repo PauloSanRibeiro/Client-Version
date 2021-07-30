@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Windows.Forms;
 
 namespace ClientVersionForms
@@ -18,68 +19,23 @@ namespace ClientVersionForms
         private void Form1_Load(object sender, EventArgs e)
         {
 
-
-            /*
-              //Criando uma tabela
-            DataTable dt = new DataTable();
-
-            //Lendo linhas do csv
-            string[] lines = File.ReadAllLines(@"C:\Users\Paulo S Ribeiro\Documents\Documentos\ClientVersion\testeVersion\Files\client.csv");
-
-            //Percorrer todas as linhas que foram lidas do arquivo CSV
-            for(int i = 0; i < lines.Length; i++)
-            {
-                //Pega linha atual e a cada virgula coloca o novo text em outra posição array
-                string[] fields = lines[i].Split(Convert.ToChar(","));
-                //string nameClient = fields[0];
-                //string urlClient = fields[1];
-
-                /*foreach (var field in fields)
-                {
-                    //Cria coluna
-                    //DataColumn col = new DataColumn();
-
-                    //Adiciona a columa ma table DT
-                    dt.Columns.Add(field);
-                }*/
-            /*
-                if (i == 0)
-                {
-                    for (int i2 = 0; i2 < fields.Length; i2++)
-                    {
-                        //Cria coluna
-                        DataColumn col = new DataColumn();
-
-                        //Adiciona a columa ma table DT
-                        dt.Columns.Add(col);
-                    }
-                }
-
-                //Adiciona linhas ao datatable dt
-                dt.Rows.Add(fields);
-            }
-            //Depois de montado o datatable, vamos falar para o grid
-            //que a fonte de dados para ele exibir, será o datatable que 
-            //a gente acabou de criar
-
-            dataGridView1.DataSource = dt;*/
         }
+
+        private void BtnSearchArchive_Click(object sender, EventArgs e)
+        {
+            OpenSelectFile();
+
+        }
+
+        private void BntSearchVersionClient_Click_1(object sender, EventArgs e)
+        {
+            dataGridView1.Visible = true;
+            SearchVersionClient();
+        }
+
 
         public void SearchVersionClient()
         {
-            /*
-             *StreamReader clientVersion = new StreamReader(@"C:\Users\Paulo S Ribeiro\Documents\Documentos\ClientVersion\testeVersion\Files\client.csv");
-            string lines;
-            string[] fields;
-
-            while ((lines = clientVersion.ReadLine()) != null)
-            {
-                fields = lines.Split(',');
-                dataGridView1.Rows.Add(fields);
-            }
-            */
-
-
             string filesPath = txtBoxDirectory.Text;  // @"C:\Users\Paulo S Ribeiro\Documents\Documentos\ClientVersion\testeVersion\Files\client.csv";
             string lines;
 
@@ -97,6 +53,12 @@ namespace ClientVersionForms
                     Clients client = new Clients(nameClient, urlClient);
 
                     var docVersion = new HtmlWeb().Load(urlClient);
+
+                    ServicePointManager.ServerCertificateValidationCallback += (sender, certificate, chain, errors) =>
+
+                    {
+                        return true;
+                    };
                     var version = docVersion.DocumentNode.Descendants().Where(d => d.Attributes.Contains("class") && d.Attributes["class"].Value.Contains("vmx-login-versao"));
 
                     foreach (var ver in version)
@@ -104,68 +66,50 @@ namespace ClientVersionForms
                         var versao = ver.InnerText;
                         dataGridView1.Rows.Add(client.NameClient, client.UrlClient, versao);
                     }
-
-
-
-                    /*foreach (var ver in version)
-                    {
-                        foreach (char name in nameClient)
-                        {
-                            Write($"{name}");
-                        }
-
-                        WriteLine($" ->  {ver.InnerText}");
-
-
-                    }*/
                 }
             }
-            /*
-                string clientVersion = @"C:\Users\Paulo S Ribeiro\Documents\Documentos\ClientVersion\testeVersion\Files\client.txt";
-                string directoryName = Path.GetDirectoryName(Application.ExecutablePath);
-                DataTable dt;
-
-                using (OleDbConnection cn = new OleDbConnection(@"Provider=Microsoft.Jet.OleDb.4.0;" +
-                                                                 "Data Source=" + directoryName + ";" +
-                                                                 "Extended Properties=\"Text;HDR=Yes;FMT=Delimited\""))//("Provider=Microsoft.Jet.OleDb.4.0;" + "Data Source =" + directoryName + "," + "Extended Properties=\"Text;HDR=Yes;FMT=Delimited\"")) ;
-                {
-                    cn.Open();
-                    using (OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT * FROM " + clientVersion, cn))
-                    {
-                        dt = new DataTable("Clientes");
-                        adapter.Fill(dt);
-                    }
-
-
-                }
-
-                ExibirTexto();
-                dataGridView1.DataSource = dt;*/
-
         }
 
-        private void BntSearchVersionClient_Click_1(object sender, EventArgs e)
+        private void OpenSelectFile()
         {
-            dataGridView1.Visible = true;
-            SearchVersionClient();
+            var fileContent = string.Empty;
+            var filePath = string.Empty;
+            var archiver = string.Empty;
+
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = @"c:\";
+                openFileDialog.Filter = "Files (*.csv)|*.csv";
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
+
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    //Get the path of specified file (Obtenha o caminho do arquivo especificado)
+                    filePath = openFileDialog.FileName;
+                    txtBoxDirectory.Text = filePath;
+
+                    //Read the contents of the file into a stream (Leia o conteúdo do arquivo em um fluxo)
+                    var fileStream = openFileDialog.OpenFile();
+                }
+            }
+
         }
 
         private void LblQuestion_Click(object sender, EventArgs e)
         {
 
         }
-        /*
-private void ExibirTexto()
-{
-string caminhoArquivo = @"C:\Users\Paulo S Ribeiro\Documents\Documentos\ClientVersion\testeVersion\Files\client.txt";
-string[] consulta = File.ReadAllLines(caminhoArquivo);
 
-foreach (var item in consulta)
-{
-lsBoxText.Visible = true;
-lsBoxText.Items.Add(item);
-}
-}*/
+        private void txtBoxDirectory_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

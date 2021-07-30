@@ -66,16 +66,16 @@
     <value>Verdana, 18pt, style=Bold, Italic, Underline</value>
   </data>
   <data name="txtLblTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>261, 9</value>
+    <value>295, 10</value>
   </data>
   <data name="txtLblTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 29</value>
+    <value>236, 29</value>
   </data>
   <data name="txtLblTitle.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="txtLblTitle.Text" xml:space="preserve">
-    <value>Version Query</value>
+    <value>VERSION QUERY</value>
   </data>
   <data name="txtLblTitle.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -90,7 +90,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtLblTitle.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="ClientName.HeaderText" xml:space="preserve">
     <value>Nome Municpio</value>
@@ -117,10 +117,10 @@
     <value>114</value>
   </data>
   <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 107</value>
+    <value>3, 51</value>
   </data>
   <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>732, 561</value>
+    <value>831, 561</value>
   </data>
   <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -138,7 +138,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="BntSearchVersionClient.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
@@ -151,16 +151,16 @@
     <value>NoControl</value>
   </data>
   <data name="BntSearchVersionClient.Location" type="System.Drawing.Point, System.Drawing">
-    <value>620, 62</value>
+    <value>658, 647</value>
   </data>
   <data name="BntSearchVersionClient.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 26</value>
+    <value>85, 25</value>
   </data>
   <data name="BntSearchVersionClient.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="BntSearchVersionClient.Text" xml:space="preserve">
-    <value>Search</value>
+    <value>Start</value>
   </data>
   <data name="&gt;&gt;BntSearchVersionClient.Name" xml:space="preserve">
     <value>BntSearchVersionClient</value>
@@ -172,19 +172,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BntSearchVersionClient.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="txtBoxDirectory.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 12pt</value>
   </data>
   <data name="txtBoxDirectory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 62</value>
+    <value>149, 647</value>
+  </data>
+  <data name="txtBoxDirectory.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="txtBoxDirectory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>513, 26</value>
+    <value>409, 25</value>
   </data>
   <data name="txtBoxDirectory.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;txtBoxDirectory.Name" xml:space="preserve">
     <value>txtBoxDirectory</value>
@@ -196,7 +199,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtBoxDirectory.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="LblQuestion.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -205,16 +208,16 @@
     <value>Verdana, 12pt, style=Bold</value>
   </data>
   <data name="LblQuestion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 65</value>
+    <value>12, 650</value>
   </data>
   <data name="LblQuestion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 18</value>
+    <value>131, 18</value>
   </data>
   <data name="LblQuestion.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
   <data name="LblQuestion.Text" xml:space="preserve">
-    <value>File Path</value>
+    <value>Select Archive</value>
   </data>
   <data name="LblQuestion.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -229,6 +232,72 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LblQuestion.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="BtnSearchArchive.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="BtnSearchArchive.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 12pt, style=Bold</value>
+  </data>
+  <data name="BtnSearchArchive.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BtnSearchArchive.Location" type="System.Drawing.Point, System.Drawing">
+    <value>567, 647</value>
+  </data>
+  <data name="BtnSearchArchive.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 25</value>
+  </data>
+  <data name="BtnSearchArchive.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="BtnSearchArchive.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="&gt;&gt;BtnSearchArchive.Name" xml:space="preserve">
+    <value>BtnSearchArchive</value>
+  </data>
+  <data name="&gt;&gt;BtnSearchArchive.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnSearchArchive.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BtnSearchArchive.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="BtnExit.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="BtnExit.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 12pt, style=Bold</value>
+  </data>
+  <data name="BtnExit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BtnExit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>749, 647</value>
+  </data>
+  <data name="BtnExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 25</value>
+  </data>
+  <data name="BtnExit.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="BtnExit.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="&gt;&gt;BtnExit.Name" xml:space="preserve">
+    <value>BtnExit</value>
+  </data>
+  <data name="&gt;&gt;BtnExit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnExit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BtnExit.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -241,7 +310,7 @@
     <value>True</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>739, 671</value>
+    <value>839, 679</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
@@ -3147,7 +3216,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Client Version</value>
+    <value>Search Versions</value>
   </data>
   <data name="&gt;&gt;ClientName.Name" xml:space="preserve">
     <value>ClientName</value>

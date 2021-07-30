@@ -4,8 +4,9 @@ using System.IO;
 using HtmlAgilityPack;
 using System.Linq;
 using ClientVersion.Entites;
+using System.Net;
 
-namespace ClientVersion
+namespace ClientVersionConsole
 {
     class Program
     {
@@ -31,6 +32,13 @@ namespace ClientVersion
                         Client client = new Client(nameClient, urlClient);
 
                         var docVersion = new HtmlWeb().Load(urlClient);
+
+                        ServicePointManager.ServerCertificateValidationCallback += (sender, certificate, chain, errors) =>
+                        
+                        {
+                            return true;
+                        };
+                        
                         var version = docVersion.DocumentNode.Descendants().Where(d => d.Attributes.Contains("class") && d.Attributes["class"].Value.Contains("vmx-login-versao"));
 
                         foreach (var ver in version)
@@ -39,10 +47,8 @@ namespace ClientVersion
                             {
                                 Write($"{name}");
                             }
-                            
+
                             WriteLine($" ->  {ver.InnerText}");
-                            
-                            
                         }
                     }
                 }

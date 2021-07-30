@@ -38,6 +38,8 @@ namespace ClientVersionForms
             this.BntSearchVersionClient = new System.Windows.Forms.Button();
             this.txtBoxDirectory = new System.Windows.Forms.TextBox();
             this.LblQuestion = new System.Windows.Forms.Label();
+            this.BtnSearchArchive = new System.Windows.Forms.Button();
+            this.BtnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,7 +89,12 @@ namespace ClientVersionForms
             // BntSearchVersionClient
             // 
             this.BntSearchVersionClient.BackColor = System.Drawing.Color.Transparent;
+            this.BntSearchVersionClient.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BntSearchVersionClient.FlatAppearance.BorderSize = 2;
+            this.BntSearchVersionClient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.BntSearchVersionClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             resources.ApplyResources(this.BntSearchVersionClient, "BntSearchVersionClient");
+            this.BntSearchVersionClient.ForeColor = System.Drawing.Color.Black;
             this.BntSearchVersionClient.Name = "BntSearchVersionClient";
             this.BntSearchVersionClient.UseVisualStyleBackColor = false;
             this.BntSearchVersionClient.Click += new System.EventHandler(this.BntSearchVersionClient_Click_1);
@@ -95,21 +102,51 @@ namespace ClientVersionForms
             // txtBoxDirectory
             // 
             resources.ApplyResources(this.txtBoxDirectory, "txtBoxDirectory");
-            this.txtBoxDirectory.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtBoxDirectory.ForeColor = System.Drawing.Color.Black;
             this.txtBoxDirectory.Name = "txtBoxDirectory";
+            this.txtBoxDirectory.TextChanged += new System.EventHandler(this.txtBoxDirectory_TextChanged);
             // 
             // LblQuestion
             // 
             resources.ApplyResources(this.LblQuestion, "LblQuestion");
-            this.LblQuestion.BackColor = System.Drawing.Color.Transparent;
+            this.LblQuestion.BackColor = System.Drawing.Color.White;
+            this.LblQuestion.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.LblQuestion.Name = "LblQuestion";
             this.LblQuestion.Click += new System.EventHandler(this.LblQuestion_Click);
+            // 
+            // BtnSearchArchive
+            // 
+            this.BtnSearchArchive.BackColor = System.Drawing.Color.Transparent;
+            this.BtnSearchArchive.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnSearchArchive.FlatAppearance.BorderSize = 2;
+            this.BtnSearchArchive.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.BtnSearchArchive.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            resources.ApplyResources(this.BtnSearchArchive, "BtnSearchArchive");
+            this.BtnSearchArchive.ForeColor = System.Drawing.Color.Black;
+            this.BtnSearchArchive.Name = "BtnSearchArchive";
+            this.BtnSearchArchive.UseVisualStyleBackColor = false;
+            this.BtnSearchArchive.Click += new System.EventHandler(this.BtnSearchArchive_Click);
+            // 
+            // BtnExit
+            // 
+            this.BtnExit.BackColor = System.Drawing.Color.Transparent;
+            this.BtnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnExit.FlatAppearance.BorderSize = 2;
+            this.BtnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            resources.ApplyResources(this.BtnExit, "BtnExit");
+            this.BtnExit.ForeColor = System.Drawing.Color.Black;
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.UseVisualStyleBackColor = false;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // VersionClient
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(101)))), ((int)(((byte)(159)))));
+            this.Controls.Add(this.BtnExit);
+            this.Controls.Add(this.BtnSearchArchive);
             this.Controls.Add(this.LblQuestion);
             this.Controls.Add(this.txtBoxDirectory);
             this.Controls.Add(this.BntSearchVersionClient);
@@ -137,6 +174,8 @@ namespace ClientVersionForms
         private System.Windows.Forms.DataGridViewTextBoxColumn Version;
         private System.Windows.Forms.TextBox txtBoxDirectory;
         private System.Windows.Forms.Label LblQuestion;
+        private System.Windows.Forms.Button BtnSearchArchive;
+        private System.Windows.Forms.Button BtnExit;
     }
 }
 
