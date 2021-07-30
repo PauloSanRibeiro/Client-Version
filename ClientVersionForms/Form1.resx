@@ -93,28 +93,28 @@
     <value>6</value>
   </data>
   <data name="ClientName.HeaderText" xml:space="preserve">
-    <value>Nome Municpio</value>
+    <value>Cliente</value>
   </data>
   <data name="ClientName.Width" type="System.Int32, mscorlib">
-    <value>133</value>
-  </data>
-  <metadata name="Url.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Url.HeaderText" xml:space="preserve">
-    <value>URL de Acesso</value>
-  </data>
-  <data name="Url.Width" type="System.Int32, mscorlib">
-    <value>130</value>
+    <value>76</value>
   </data>
   <metadata name="Version.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="Version.HeaderText" xml:space="preserve">
-    <value>VersionClient</value>
+    <value>Versão Atual</value>
   </data>
   <data name="Version.Width" type="System.Int32, mscorlib">
-    <value>114</value>
+    <value>111</value>
+  </data>
+  <metadata name="Url.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Url.HeaderText" xml:space="preserve">
+    <value>Endereço de Acesso</value>
+  </data>
+  <data name="Url.Width" type="System.Int32, mscorlib">
+    <value>106</value>
   </data>
   <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 51</value>
@@ -3224,16 +3224,16 @@
   <data name="&gt;&gt;ClientName.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Url.Name" xml:space="preserve">
-    <value>Url</value>
-  </data>
-  <data name="&gt;&gt;Url.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;Version.Name" xml:space="preserve">
     <value>Version</value>
   </data>
   <data name="&gt;&gt;Version.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Url.Name" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="&gt;&gt;Url.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

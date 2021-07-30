@@ -32,14 +32,14 @@ namespace ClientVersionForms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VersionClient));
             this.txtLblTitle = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ClientName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Url = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Version = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BntSearchVersionClient = new System.Windows.Forms.Button();
             this.txtBoxDirectory = new System.Windows.Forms.TextBox();
             this.LblQuestion = new System.Windows.Forms.Label();
             this.BtnSearchArchive = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
+            this.ClientName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Version = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Url = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,40 +59,19 @@ namespace ClientVersionForms
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ClientName,
-            this.Url,
-            this.Version});
+            this.Version,
+            this.Url});
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            // 
-            // ClientName
-            // 
-            this.ClientName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            resources.ApplyResources(this.ClientName, "ClientName");
-            this.ClientName.Name = "ClientName";
-            this.ClientName.ReadOnly = true;
-            // 
-            // Url
-            // 
-            this.Url.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            resources.ApplyResources(this.Url, "Url");
-            this.Url.Name = "Url";
-            this.Url.ReadOnly = true;
-            // 
-            // Version
-            // 
-            this.Version.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            resources.ApplyResources(this.Version, "Version");
-            this.Version.Name = "Version";
-            this.Version.ReadOnly = true;
             // 
             // BntSearchVersionClient
             // 
             this.BntSearchVersionClient.BackColor = System.Drawing.Color.Transparent;
             this.BntSearchVersionClient.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BntSearchVersionClient.FlatAppearance.BorderSize = 2;
-            this.BntSearchVersionClient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.BntSearchVersionClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.BntSearchVersionClient.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BntSearchVersionClient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LawnGreen;
+            this.BntSearchVersionClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
             resources.ApplyResources(this.BntSearchVersionClient, "BntSearchVersionClient");
             this.BntSearchVersionClient.ForeColor = System.Drawing.Color.Black;
             this.BntSearchVersionClient.Name = "BntSearchVersionClient";
@@ -118,9 +97,9 @@ namespace ClientVersionForms
             // 
             this.BtnSearchArchive.BackColor = System.Drawing.Color.Transparent;
             this.BtnSearchArchive.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnSearchArchive.FlatAppearance.BorderSize = 2;
-            this.BtnSearchArchive.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.BtnSearchArchive.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.BtnSearchArchive.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnSearchArchive.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LawnGreen;
+            this.BtnSearchArchive.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
             resources.ApplyResources(this.BtnSearchArchive, "BtnSearchArchive");
             this.BtnSearchArchive.ForeColor = System.Drawing.Color.Black;
             this.BtnSearchArchive.Name = "BtnSearchArchive";
@@ -131,14 +110,35 @@ namespace ClientVersionForms
             // 
             this.BtnExit.BackColor = System.Drawing.Color.Transparent;
             this.BtnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnExit.FlatAppearance.BorderSize = 2;
-            this.BtnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.BtnExit.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LawnGreen;
+            this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
             resources.ApplyResources(this.BtnExit, "BtnExit");
             this.BtnExit.ForeColor = System.Drawing.Color.Black;
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.UseVisualStyleBackColor = false;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
+            // ClientName
+            // 
+            this.ClientName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            resources.ApplyResources(this.ClientName, "ClientName");
+            this.ClientName.Name = "ClientName";
+            this.ClientName.ReadOnly = true;
+            // 
+            // Version
+            // 
+            this.Version.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            resources.ApplyResources(this.Version, "Version");
+            this.Version.Name = "Version";
+            this.Version.ReadOnly = true;
+            // 
+            // Url
+            // 
+            this.Url.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            resources.ApplyResources(this.Url, "Url");
+            this.Url.Name = "Url";
+            this.Url.ReadOnly = true;
             // 
             // VersionClient
             // 
@@ -169,13 +169,13 @@ namespace ClientVersionForms
         private System.Windows.Forms.Label txtLblTitle;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button BntSearchVersionClient;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClientName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Url;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Version;
         private System.Windows.Forms.TextBox txtBoxDirectory;
         private System.Windows.Forms.Label LblQuestion;
         private System.Windows.Forms.Button BtnSearchArchive;
         private System.Windows.Forms.Button BtnExit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClientName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Version;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Url;
     }
 }
 

@@ -61,10 +61,11 @@ namespace ClientVersionForms
                     };
                     var version = docVersion.DocumentNode.Descendants().Where(d => d.Attributes.Contains("class") && d.Attributes["class"].Value.Contains("vmx-login-versao"));
 
+                    int found;
                     foreach (var ver in version)
                     {
                         var versao = ver.InnerText;
-                        dataGridView1.Rows.Add(client.NameClient, client.UrlClient, versao);
+                        dataGridView1.Rows.Add(client.NameClient, versao.Substring(found = 7), client.UrlClient);
                     }
                 }
             }
