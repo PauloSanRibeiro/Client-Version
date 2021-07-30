@@ -24,7 +24,6 @@ namespace ClientVersionForms
         private void BtnSearchArchive_Click(object sender, EventArgs e)
         {
             OpenSelectFile();
-
         }
 
         private void BntSearchVersionClient_Click_1(object sender, EventArgs e)
@@ -38,6 +37,7 @@ namespace ClientVersionForms
         {
             string filesPath = txtBoxDirectory.Text;  // @"C:\Users\Paulo S Ribeiro\Documents\Documentos\ClientVersion\testeVersion\Files\client.csv";
             string lines;
+
 
             string[] fields = File.ReadAllLines(filesPath);
 
@@ -61,11 +61,12 @@ namespace ClientVersionForms
                     };
                     var version = docVersion.DocumentNode.Descendants().Where(d => d.Attributes.Contains("class") && d.Attributes["class"].Value.Contains("vmx-login-versao"));
 
-                    int found;
+
                     foreach (var ver in version)
                     {
+
                         var versao = ver.InnerText;
-                        dataGridView1.Rows.Add(client.NameClient, versao.Substring(found = 7), client.UrlClient);
+                        dataGridView1.Rows.Add(client.NameClient, versao.Substring(8), client.UrlClient);
                     }
                 }
             }
